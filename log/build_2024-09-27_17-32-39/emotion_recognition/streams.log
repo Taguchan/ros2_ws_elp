@@ -1,0 +1,22 @@
+[0.319s] Invoking command in '/home/karin-22/ros2_ws_elp/src/emotion_recognition': PYTHONPATH=/home/karin-22/ros2_ws_elp/build/emotion_recognition/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/emotion_recognition build --build-base /home/karin-22/ros2_ws_elp/build/emotion_recognition/build install --record /home/karin-22/ros2_ws_elp/build/emotion_recognition/install.log --single-version-externally-managed install_data
+[0.444s] running egg_info
+[0.444s] writing ../../build/emotion_recognition/emotion_recognition.egg-info/PKG-INFO
+[0.444s] writing dependency_links to ../../build/emotion_recognition/emotion_recognition.egg-info/dependency_links.txt
+[0.444s] writing entry points to ../../build/emotion_recognition/emotion_recognition.egg-info/entry_points.txt
+[0.444s] writing requirements to ../../build/emotion_recognition/emotion_recognition.egg-info/requires.txt
+[0.444s] writing top-level names to ../../build/emotion_recognition/emotion_recognition.egg-info/top_level.txt
+[0.446s] reading manifest file '../../build/emotion_recognition/emotion_recognition.egg-info/SOURCES.txt'
+[0.446s] writing manifest file '../../build/emotion_recognition/emotion_recognition.egg-info/SOURCES.txt'
+[0.446s] running build
+[0.446s] running build_py
+[0.446s] running install
+[0.446s] running install_lib
+[0.447s] running install_data
+[0.447s] running install_egg_info
+[0.448s] removing '/home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/python3.10/site-packages/emotion_recognition-0.0.0-py3.10.egg-info' (and everything under it)
+[0.448s] Copying ../../build/emotion_recognition/emotion_recognition.egg-info to /home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/python3.10/site-packages/emotion_recognition-0.0.0-py3.10.egg-info
+[0.449s] running install_scripts
+[0.459s] Installing camera_preview script to /home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/emotion_recognition
+[0.459s] Installing fer_preview script to /home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/emotion_recognition
+[0.459s] writing list of installed files to '/home/karin-22/ros2_ws_elp/build/emotion_recognition/install.log'
+[0.470s] Invoked command in '/home/karin-22/ros2_ws_elp/src/emotion_recognition' returned '0': PYTHONPATH=/home/karin-22/ros2_ws_elp/build/emotion_recognition/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/karin-22/ros2_ws_elp/install/emotion_recognition/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/emotion_recognition build --build-base /home/karin-22/ros2_ws_elp/build/emotion_recognition/build install --record /home/karin-22/ros2_ws_elp/build/emotion_recognition/install.log --single-version-externally-managed install_data
