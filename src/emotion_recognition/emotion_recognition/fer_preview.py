@@ -14,16 +14,24 @@ class EmotionRecognitionNode(Node):
         self.br = CvBridge()
         self.emotion_detector = FER(mtcnn=True)
 
+        self.face_id_counter = 0
+
     def listener_callback(self, data):
         frame = self.br.imgmsg_to_cv2(data, 'bgr8')
 
         # 表情認識処理
         result = self.emotion_detector.detect_emotions(frame)
 
-        for face in result:
+        self.get_logger().info(f'Number of faces detected: {len(result)}')
+
+        result_sorted = sorted(result, key=lambda face: face['box'][0], reverse=True)
+
+        for idx, face in enumerate(result_sorted):
             (x, y, w, h) = face["box"]
             emotions = face["emotions"]
             emotion, score = max(emotions.items(), key=lambda item: item[1])
+
+            face_id = idx + 1
 
             # 検出された顔に矩形を描画
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
@@ -31,7 +39,7 @@ class EmotionRecognitionNode(Node):
             cv2.putText(frame, f'{emotion}: {score:.2f}', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
 
             # 表情とスコアをターミナルに出力
-            self.get_logger().info(f'Emotion: {emotion}, Score: {score:.2f}')
+            self.get_logger().info(f'Face ID: {face_id}, Emotion: {emotion}, Score: {score:.2f}')
 
         # パブリッシュ用のメッセージに変換
         msg = self.br.cv2_to_imgmsg(frame, 'bgr8')
