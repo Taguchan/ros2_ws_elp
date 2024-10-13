@@ -23,7 +23,7 @@ setup(
 
             'camera_preview = emotion_recognition.camera_preview:main',
             'fer_preview = emotion_recognition.fer_preview:main',
-    
+            'fer_preview_multi = emotion_recognition.fer_preview_multi:main'
         ],
     },
 )
